@@ -14,5 +14,5 @@ else:
     response = requests.get("https://httpbin.org/get", headers={"Authorization": f"Bearer {api_key}"})
     print("Status code:", response.status_code)
     print("Response:", response.json())
-    print("This is cool.")
-    print("wow")
+    # print("This is cool.")
+    # print("wow")
