@@ -41,7 +41,6 @@ def main():
             break
 
         reply = ask_chatgpt(user_input)
-        # print("\n" + "-" * 50)
         print(f"\nAI Assistant: {reply}\n")
         print("-" * 50 + "\n")
 
