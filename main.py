@@ -10,7 +10,7 @@ load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
-    raise EnvironmentError("Missing OPEN_API_KEY in .env file")
+    raise EnvironmentError("Missing OPENAI_API_KEY in .env file")
 
 # Create OpenAI client
 client = openai.OpenAI(api_key=api_key)
@@ -26,7 +26,7 @@ def ask_chatgpt(prompt: str) -> str:
             messages=conversation 
         )
         reply = response.choices[0].message.content.strip()
-        conversation.append({"role":"assistant","content":reply})
+        conversation.append({"role":"assistant","content": reply})
         return reply
     except Exception as e:
         return f"Error: {e}"
