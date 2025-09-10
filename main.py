@@ -32,17 +32,18 @@ def ask_chatgpt(prompt: str) -> str:
         return f"Error: {e}"
 
 def main():
-    print("Welcome to ChatGPT Terminal (type 'exit' to quit)\n")
+    print("\nWelcome to ChatGPT Terminal (type 'exit' to quit)\n")
+    print("-" * 50 + "\n")
 
     while True:
         user_input = input("You: ")
         if user_input.lower() in ["exit", "quit"]:
-            print("Goodbye!")
+            print("\nGoodbye!\n")
             break
 
         reply = ask_chatgpt(user_input)
-        print(f"\nAI Assistant: {reply}\n")
-        print("-" * 50 + "\n")
+        print(f"\nAI Assistant: {reply}")
+        print("\n" + "-" * 50 + "\n")
 
 if __name__ == "__main__":
     try:
