@@ -45,7 +45,7 @@ def ask_chatgpt(prompt: str) -> str:
 
 # User interface
 def main():
-    print(f"{BOLD}{BLUE}\nWelcome to ChatGPT Terminal (type 'exit' to quit)\n{RESET}")
+    print(f"{BOLD}{BLUE}\nWelcome to ChatGPT Terminal{RESET} (type 'exit' to quit)\n")
     print("-" * 50 + "\n")
 
     while True:
