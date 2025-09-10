@@ -3,6 +3,14 @@ import os
 from dotenv import load_dotenv
 from typing import List, Dict
 
+# ANSI escape codes
+RESET = "\033[0m"
+BOLD = "\033[1m"
+RED = "\033[31m"
+GREEN = "\033[32m"
+BLUE = "\033[34m"
+YELLOW = "\033[33m"
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -13,7 +21,7 @@ try:
     if not api_key:
         raise EnvironmentError("Missing OPENAI_API_KEY in .env file")
 except:
-    print("Missing OPENAI_API_KEY in .env file")
+    print(f"{RED}Missing OPENAI_API_KEY in .env file{RESET}")
 
 # Create OpenAI client
 client = openai.OpenAI(api_key=api_key)
@@ -33,11 +41,11 @@ def ask_chatgpt(prompt: str) -> str:
         conversation.append({"role":"assistant","content": reply})
         return reply
     except Exception as error:
-        return f"Error: {error}"
+        return f"{RED}Error: {error}{RESET}"
 
 # User interface
 def main():
-    print("\nWelcome to ChatGPT Terminal (type 'exit' to quit)\n")
+    print(f"{BOLD}{BLUE}\nWelcome to ChatGPT Terminal (type 'exit' to quit)\n{RESET}")
     print("-" * 50 + "\n")
 
     while True:
@@ -45,6 +53,8 @@ def main():
         if user_input.lower() in ["exit", "quit"]:
             print("\nExiting Program. Goodbye!\n")
             break
+        
+        print(f'{YELLOW}\nLoading...{RESET}')
 
         reply = ask_chatgpt(user_input)
         print(f"\nAI Assistant: {reply}")
