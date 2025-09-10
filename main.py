@@ -51,7 +51,7 @@ def main():
     while True:
         user_input = input("You: ")
         if user_input.lower() in ["exit", "quit"]:
-            print("\nExiting Program. Goodbye!\n")
+            print("\n{GREEN}Exiting Program. Goodbye!\n{RESET}")
             break
         
         print(f'{YELLOW}\nLoading...{RESET}')
@@ -65,4 +65,4 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\nExiting Program. Goodbye!")
+        print("\n{GREEN}Exiting Program. Goodbye!\n{RESET}")
