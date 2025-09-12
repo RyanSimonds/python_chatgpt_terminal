@@ -51,7 +51,7 @@ def main():
     while True:
         user_input = input("You: ")
         if user_input.lower() in ["exit", "quit"]:
-            print("\n{GREEN}Exiting Program. Goodbye!\n{RESET}")
+            print(f"\n{GREEN}Exiting Program. Goodbye!\n{RESET}")
             break
         
         print(f'{YELLOW}\nLoading...{RESET}')
