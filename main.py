@@ -17,11 +17,8 @@ load_dotenv()
 # Get API key securely from environment
 api_key = os.getenv("OPENAI_API_KEY")
 
-try:
-    if not api_key:
-        raise EnvironmentError("Missing OPENAI_API_KEY in .env file")
-except:
-    print(f"{RED}Missing OPENAI_API_KEY in .env file{RESET}")
+if not api_key:
+    raise EnvironmentError(f"{RED}Missing OPENAI_API_KEY in .env file{RESET}")
 
 # Create OpenAI client
 client = openai.OpenAI(api_key=api_key)
