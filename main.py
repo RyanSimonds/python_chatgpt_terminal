@@ -12,9 +12,10 @@ Features:
 - Securely loads OpenAI API key from environment variables
 
 Functions:
-- ask_chatgpt(prompt: str) -> str: Sends a user prompt to ChatGPT
-and returns the response
-- main(): Runs the terminal user interface and managers the chat loop
+- ask_chatgpt(prompt: str) -> str: 
+    Sends a user prompt to ChatGPT and returns the response
+- main(): 
+    Runs the terminal user interface and managers the chat loop
 """
 
 
