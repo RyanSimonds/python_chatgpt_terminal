@@ -14,8 +14,19 @@
    ```bash
    git clone https://github.com/yourusername/chatgpt-terminal.git
 
-## To Run:  
-- Make sure Python 3.10+ is installed  
-- Place your OpenAI API key in a `.env` file like this: `OPENAI_API_KEY=your_key_here`  
-- Run `python main.py` in the terminal  
-- Type messages to chat or `exit` to quit
+## To Run
+1. Ensure **Python 3.10+** is installed on your system.  
+2. Create a `.env` file in the project folder and add your OpenAI API key like this:  
+   ```
+   OPENAI_API_KEY=your_key_here
+   ```
+3. Install dependencies (if required):  
+   ```
+   pip install openai python-dotenv
+   ```
+4. Run the program:  
+   ```
+   python main.py
+   ```
+5. Type messages directly into the terminal to chat, or type `exit` to quit.
+
